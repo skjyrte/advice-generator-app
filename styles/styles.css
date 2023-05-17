@@ -1,0 +1,49 @@
+.body {
+  background-color: blueviolet;
+}
+
+.frame {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.adviceNo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adviceContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100px;
+}
+
+.patternDivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.diceImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.diceImage > img {
+  height: 100%;
+}
+
+.errorClass {
+  color: red;
+}
