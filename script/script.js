@@ -5,8 +5,8 @@ function getAdvice() {
     .then((obj) => obj)
     .then((obj) => {
       document.querySelector(".adviceContent").classList.remove("errorClass");
-      document.querySelector(".adviceNo").innerHTML = obj.id;
-      document.querySelector(".adviceContent").innerHTML = obj.advice;
+      document.querySelector(".adviceNo").innerHTML = `ADVICE #${obj.id}`;
+      document.querySelector(".adviceContent").innerHTML = `"${obj.advice}"`;
     })
     .catch(() => {
       document.querySelector(".adviceContent").innerHTML =
