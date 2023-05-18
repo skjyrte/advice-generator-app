@@ -4,14 +4,14 @@ html {
 }
 
 body {
-  background-color: blueviolet;
+  background-color: hsl(218, 23%, 16%);
 }
 
 .frame {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  background-color: aquamarine;
+  background-color: hsl(217, 19%, 24%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,6 +20,7 @@ body {
 }
 
 .adviceNo {
+  color: hsl(150, 100%, 66%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,19 +34,20 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-
+  height: 150px;
   font-size: 28px;
+  color: hsl(193, 38%, 86%);
 }
 
 .patternDivider {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  height: 60px;
 }
 
 .diceImage {
-  background-color: azure;
+  background-color: hsl(150, 100%, 66%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,4 +66,34 @@ body {
 
 .errorClass {
   color: red;
+}
+
+@media (max-width: 400px) {
+  .adviceContent {
+    font-size: var(--fontSize, 28px);
+  }
+}
+
+@media (min-width: 800px) {
+  .frame {
+    width: 630px;
+  }
+}
+
+@media (min-width: 600px) {
+  .desktop {
+    display: unset;
+  }
+  .mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: unset;
+  }
 }

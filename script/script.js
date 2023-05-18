@@ -7,10 +7,15 @@ function getAdvice() {
       document.querySelector(".adviceContent").classList.remove("errorClass");
       document.querySelector(".adviceNo").innerHTML = `ADVICE #${obj.id}`;
       document.querySelector(".adviceContent").innerHTML = `"${obj.advice}"`;
+      document.documentElement.style.setProperty("--fontSize", "28px");
+      if (obj.advice.length > 80) {
+        document.documentElement.style.setProperty("--fontSize", "22px");
+      }
     })
     .catch(() => {
       document.querySelector(".adviceContent").innerHTML =
         "Page has encountered an error. Please try again later.";
+      document.querySelector(".adviceNo").innerHTML = "";
       document.querySelector(".adviceContent").classList.add("errorClass");
     });
 }
