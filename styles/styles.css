@@ -78,6 +78,9 @@ body {
   .frame {
     width: 630px;
   }
+  .adviceContent {
+    margin: 0;
+  }
 }
 
 @media (min-width: 600px) {
