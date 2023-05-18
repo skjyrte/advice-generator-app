@@ -64,8 +64,9 @@ body {
   width: 25px;
 }
 
-.errorClass {
+.frame > .errorClass {
   color: red;
+  font-size: 20px;
 }
 
 @media (max-width: 400px) {
