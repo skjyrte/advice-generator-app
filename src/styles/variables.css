@@ -1,0 +1,16 @@
+:root {
+  --dark-1: hsl(220, 25%, 15%);
+  --dark-2: hsl(220, 25%, 30%);
+
+  --bright-green-1: hsl(150, 100%, 50%);
+  --bright-green-2: hsl(150, 100%, 65%);
+  --bright-green-3: hsl(150, 100%, 80%);
+  --bright-green-4: hsl(150, 100%, 95%);
+
+  --danger-1: hsl(0, 100%, 40%);
+
+  --font-root: 12px;
+  --font-small: 1rem;
+  --font-medium: 1.6rem;
+  --font-large: 2.4rem;
+}

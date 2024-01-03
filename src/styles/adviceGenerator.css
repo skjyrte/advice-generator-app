@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Manrope", sans-serif;
+  src: url("../fonts/Manrope-Medium.ttf") format("ttf");
+}
+
+:root {
+  font-size: var(--font-root);
+  font-weight: 500;
+}
+
+body {
+  background-color: var(--dark-1);
+}
+
+.adviceBox {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--dark-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 20px 30px 20px;
+  border-radius: 10px;
+}
+
+.adviceBox__adviceNumber {
+  color: var(--bright-green-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  font-size: var(--font-small);
+  letter-spacing: 2px;
+}
+
+.adviceBox__adviceContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 150px;
+  color: var(--bright-green-4);
+  font-size: var(--font-large);
+}
+
+.adviceBox__adviceContent_textSize {
+  font-size: var(--font-large);
+}
+
+.adviceBox__adviceContent_error {
+  color: var(--danger-1);
+  font-size: var(--font-medium);
+}
+
+.adviceBox__patternDivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.adviceBox__diceImageButton {
+  background-color: var(--bright-green-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -65px;
+  transition: 0.3s;
+  filter: drop-shadow(0 0 5px var(--bright-green-1));
+  border: 0;
+  &:active {
+    background-color: var(--bright-green-3);
+    & > img {
+      filter: blur(4px);
+    }
+  }
+}
+
+.adviceBox__diceImageButton > img {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+@media (min-width: 800px) {
+  .adviceBox {
+    width: 630px;
+  }
+  .adviceBox__adviceContent {
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .adviceBox__patternDivider_desktop {
+    display: none;
+  }
+  .adviceBox__patternDivider_mobile {
+    display: unset;
+  }
+  .adviceBox__adviceContent_textSize {
+    font-size: var(--font-medium);
+  }
+}
+
+@media (min-width: 600px) {
+  .adviceBox__patternDivider_desktop {
+    display: unset;
+  }
+  .adviceBox__patternDivider_mobile {
+    display: none;
+  }
+}
+
+@media (pointer: fine) {
+  .adviceBox__diceImageButton:hover {
+    filter: drop-shadow(0 0 35px var(--bright-green-4));
+    transition: 0.2s;
+  }
+}
