@@ -2,20 +2,13 @@
   "name": "advice-generator-app",
   "version": "1.0.0",
   "description": "",
+    "private": "true",
   "scripts": {
     "build": "webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/skjyrte/advice-generator-app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/skjyrte/advice-generator-app/issues"
-  },
-  "homepage": "https://github.com/skjyrte/advice-generator-app#readme",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@typescript-eslint/parser": "^6.17.0",
