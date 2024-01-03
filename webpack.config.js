@@ -7,7 +7,6 @@ module.exports = {
   entry: "./src/index.ts",
   plugins: [new MiniCssExtractPlugin()],
   watch: true,
-  mode: "development",
   module: {
     rules: [
       {
