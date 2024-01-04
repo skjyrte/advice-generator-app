@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   entry: "./src/index.ts",
   plugins: [new MiniCssExtractPlugin()],
-  watch: true,
+/*   watch: true, */
   module: {
     rules: [
       {
