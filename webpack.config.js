@@ -1,22 +1,42 @@
-/* eslint-disable */
-/* commonJS modules instead of es6 */
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+import path from "path";
+import { default as MiniCssExtractPlugin } from "mini-css-extract-plugin";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import { default as HtmlWebpackPlugin } from "html-webpack-plugin";
+import { default as FaviconsWebpackPlugin } from "favicons-webpack-plugin";
 
-module.exports = {
+export default {
   entry: "./src/index.ts",
-  plugins: [new MiniCssExtractPlugin()],
-/*   watch: true, */
+  mode: "production",
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css",
+      chunkFilename: "[id].[contenthash].css",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      minify: false,
+      inject: "body",
+    }),
+    new FaviconsWebpackPlugin({
+      logo: "./src/favicons/favicon.png", // svg works too!
+      favicons: {
+        appName: "advice-generator-app",
+        icons: {
+          coast: false,
+          yandex: false,
+          appleStartup: false,
+        },
+      },
+    }),
+  ],
+  watch: false,
   module: {
     rules: [
       {
         test: /\.ts?$/,
         use: "ts-loader",
         exclude: /node_modules/,
-      },
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.css$/i,
@@ -36,7 +56,11 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
   },
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "./dist"),
+    filename: "[name].[contenthash].js",
+    chunkFilename: "[id].[contenthash].js",
+  },
+  optimization: {
+    realContentHash: false,
   },
 };
