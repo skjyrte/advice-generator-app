@@ -17,6 +17,11 @@ export default {
       template: "./src/index.html",
       minify: false,
       inject: "body",
+      meta: {
+        charset: "UTF-8",
+        name: "viewport",
+        content: "width=device-width, initial-scale=1.0",
+      },
     }),
     new FaviconsWebpackPlugin({
       logo: "./src/favicons/favicon.png", // svg works too!
