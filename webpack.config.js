@@ -1,9 +1,10 @@
 import path from "path";
-import { default as MiniCssExtractPlugin } from "mini-css-extract-plugin";
-import { fileURLToPath } from "url";
+import {default as MiniCssExtractPlugin} from "mini-css-extract-plugin";
+import {fileURLToPath} from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-import { default as HtmlWebpackPlugin } from "html-webpack-plugin";
-import { default as FaviconsWebpackPlugin } from "favicons-webpack-plugin";
+import {default as HtmlWebpackPlugin} from "html-webpack-plugin";
+import {default as FaviconsWebpackPlugin} from "favicons-webpack-plugin";
+import {default as CopyPlugin} from "copy-webpack-plugin";
 
 export default {
   entry: "./src/index.ts",
@@ -33,6 +34,9 @@ export default {
           appleStartup: false,
         },
       },
+    }),
+    new CopyPlugin({
+      patterns: [{from: "src/images", to: "assets/images"}],
     }),
   ],
   watch: false,

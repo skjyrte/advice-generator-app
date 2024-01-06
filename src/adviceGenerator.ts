@@ -18,8 +18,8 @@ const getAdvice = async () => {
       cache: "no-cache",
     });
     const responseObj: ApiResponse = await response.json();
-    const { slip } = responseObj;
-    const { id, advice } = slip;
+    const {slip} = responseObj;
+    const {id, advice} = slip;
     adviceContent.classList.remove("adviceBox__adviceContent_error");
     adviceNumber.innerHTML = `ADVICE #${id}`;
     adviceContent.innerHTML = `"${advice}"`;
@@ -28,7 +28,6 @@ const getAdvice = async () => {
       adviceContent.classList.add("adviceBox__adviceContent_textSize");
     }
   } catch (e) {
-    console.error(e);
     adviceContent.innerHTML = "We have an error. Please try again later.";
     adviceNumber.innerHTML = "";
     adviceContent.classList.add("adviceBox__adviceContent_error");

@@ -18,5 +18,8 @@ https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db
 
 ## Getting started:
 
-1. **npm run build** - running the webpack.
-2. Then built app files will show in “dist” folder.
+1. Pull the app from github:
+   https://github.com/skjyrte/advice-generator-app
+2. `npm install` - dependency libraries.
+3. `npm run build` - running the webpack.
+4. Then built app files will show in “dist” folder.
